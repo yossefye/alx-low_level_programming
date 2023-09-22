@@ -10,6 +10,8 @@ char *string_toupper(char *s)
 {
 	int i = 0;
 
+	if (!s)
+		return (s);
 	while (s[i] != '\0')
 	{
 		if (s[i] <= 'a' || s[i] >= 'z')
