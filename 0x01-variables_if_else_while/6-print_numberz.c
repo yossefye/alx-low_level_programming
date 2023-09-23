@@ -2,17 +2,17 @@
 /**
  *main - entry point
  *
- *Return: 0 (success)
+ *Return: Always 0 (success)
  */
 int main(void)
 {
-        int n = 0;
+	int n = 0;
 
-        while (n < 10)
-        {
-        putchar("%d", n);
-        n++;
-        }
-        putchar('\n');
-        return (0);
+	while (n < 9)
+	{
+		putchar(n);
+		n++;
+	}
+	putchar('\n');
+	return (0);
 }
