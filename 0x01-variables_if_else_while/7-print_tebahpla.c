@@ -1,17 +1,18 @@
 #include <stdio.h>
 /**
- * main - Entry point
- *
- * Return: Always 0 (Success)
+ * main -this is the description for main
+ * Return: 0 (a success)
  */
 int main(void)
 {
-char abc;
+	char pla;
 
-for (abc = 'z'; abc >= 'a'; abc--)
-{
-putchar(abc);
-}
-putchar('\n');
-return (0);
+	pla = 'z';
+	while (pla >= 'a')
+	{
+		putchar(pla);
+		pla--;
+	}
+	putchar('\n');
+	return (0);
 }
