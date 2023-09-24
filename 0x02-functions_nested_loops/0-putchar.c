@@ -1,17 +1,21 @@
-#include <main.h>
+include "main.h"
+
 /**
- * main - the entry point of the programm
- * Return: returns 0
+ * main - Entry Point
+ * Return: 0 if succesful
  */
 int main(void)
 {
-	char kar[] = "_putchar";
-	int num;
+_putchar('_');
+_putchar('p');
+_putchar('u');
+_putchar('t');
+_putchar('c');
+_putchar('h');
+_putchar('a');
+_putchar('r');
+_putchar('\n');
 
-	for (num = 0; num < 8; num++)
-	{
-		_putchar(kar[num]);
-	}
-	_putchar('\n');
-	return (0);
+return (0);
 }
+i
