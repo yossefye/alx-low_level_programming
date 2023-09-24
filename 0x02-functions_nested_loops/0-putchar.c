@@ -1,20 +1,17 @@
 #include "main.h"
-
 /**
- * main - print holberton
- * Return: 0 if succesful
+ * main - the entry point of the programm
+ * Return: returns 0
  */
 int main(void)
 {
-_putchar('_');
-_putchar('p');
-_putchar('u');
-_putchar('t');
-_putchar('c');
-_putchar('h');
-_putchar('a');
-_putchar('r');
-_putchar('\n');
+	char kar[] = "_putchar";
+	int num;
 
-return (0);
+	for (num = 0; num < 8; num++)
+	{
+		_putchar(kar[num]);
+	}
+	_putchar('\n');
+	return (0);
 }
