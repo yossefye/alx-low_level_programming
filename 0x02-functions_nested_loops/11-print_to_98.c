@@ -1,38 +1,50 @@
 #include "main.h"
-#include <stdio.h>
-
 /**
- * print_to_98 - count to 98
- * @n: variable to determine if input is greater than, less than or is 98
- *
+ * print_times_table - prints out the n times table, starting with 0
+ * @n: times table
  */
+void print_times_table(int n)
+{
+int x, y, z, k, t;
 
-void print_to_98(int n)
-{
-if (n > 98)
-{
-for (; n >= 98; n--)
-{
-printf("%d", n);
-if (n != 98)
-printf(", ");
-else
-printf("\n");
-}
-}
-else if (n < 98)
-{
-for (; n <= 98; n++)
-{
-printf("%d", n);
-if (n != 98)
-printf(", ");
-else
-printf("\n");
-}
-}
-else
-{
-printf("%d\n", n);
-}
+	for (x = 0; x <= n; x++)
+	{
+		for (y = 0; y <= n; y++)
+		{
+			z = x * y;
+			if (z == 0 && y == 0)
+				_putchar(z + '0');
+			else if (z > 99)
+			{
+				k = z % 10;
+				t = (z / 10) % 10;
+				z /= 100;
+				_putchar(',');
+				_putchar(' ');
+				_putchar(z + '0');
+				_putchar(t + '0');
+				_putchar(k + '0');
+			}
+			else if (z > 9)
+			{
+				k = z % 10;
+				z /= 10;
+				_putchar(',');
+				_putchar(' ');
+				_putchar(' ');
+				_putchar(z + '0');
+				_putchar(k + '0');
+
+			}
+			else
+			{
+				_putchar(',');
+				_putchar(' ');
+				_putchar(' ');
+				_putchar(' ');
+				_putchar(z + '0');
+			}
+		}
+		_putchar('\n');
+	}
 }
