@@ -1,26 +1,26 @@
 #include "main.h"
-
 /**
- * string_toupper - a function that changes letters to upper case
- * @s: string
- * Return: shit
+ * string_toupper - converts the string to upper
+ * @str: character to be converted
+ * Return: character
  */
-
-char *string_toupper(char *s)
+char *string_toupper(char *str)
 {
-	int i = 0;
+	char i[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	char j[] = "abcdefghijklmnopqrstuvwxyz";
+	int k = 0;
+	int l;
 
-	if (!s)
-		return (s);
-	while (s[i] != '\0')
+	while (str[k] != '\0')
 	{
-		if (s[i] <= 'a' || s[i] >= 'z')
+		for (l = 0; l < 26; l++)
 		{
-			i++;
-			continue;
+			if (str[k] == j[l])
+			{
+				str[k] = i[l];
+			}
 		}
-		s[i] = s[i] - 32;
-		i++;
+		k++;
 	}
-	return (s);
+	return (str);
 }
