@@ -1,26 +1,31 @@
 #include "main.h"
-
 /**
- * string_toupper - a function that changes letters to upper case
- * @s: string
- * Return: shit
+ * cap_string - capitalizes words in a stirng
+ * @s: the stirng in question
+ * Return: the capitalized string
  */
-
 char *cap_string(char *s)
 {
-	int i = 0;
+	int i, j;
 
-	if (!s)
-		return (s);
-	while (s[i] != '\0')
+	if (s[0] >= 'a' && s[0] <= 'z')
+		s[0] = s[0] - 32;
+	for (i = 0; s[i] != '\0'; i++)
 	{
-		if (s[i] <= 'a' || s[i] >= 'z')
+		j = i - 1;
+		if (s[i] >= 'a' && s[i] <= 'z')
 		{
-			i++;
-			continue;
+			if (s[j] == ' ' || s[j] == '.' || s[j] == '\n')
+				s[i] = s[i] - 32;
+			else if (s[j] == '?' || s[j] == '!' || s[j] == '\t')
+				s[i] = s[i] - 32;
+			else if (s[j] == ',' || s[j] == '}' || s[j] == '{')
+				s[i] = s[i] - 32;
+			else if (s[j] == ')' || s[j] == '(' || s[j] == ';' || s[j] == '\"')
+				s[i] = s[i] - 32;
 		}
-		s[i] = s[i] - 32;
-		i++;
+		else
+			continue;
 	}
 	return (s);
 }
