@@ -1,44 +1,24 @@
 #include "main.h"
+#include <stdio.h>
 /**
- * puts_half - a function that prints half of the string
- * @str: the string to be printed
+ * print_array - prints half a string
+ * @a: array
+ * @n: length of array
  */
-void puts_half(char *str)
-{
-int n = _strlen(str);
 
-if (n % 2 == 0)
+void print_array(int *a, int n)
 {
-n = _strlen(str) / 2;
-while (n < _strlen(str))
-{
-_putchar(str[n]);
-n++;
-}
-}
-else
-{
-n = _strlen(str) / 2 + 1;
-while (n < _strlen(str))
-{
-_putchar(str[n]);
-n++;
-}
-}
-_putchar('\n');
-}
-/**
- * _strlen - the lenth of a string
- * @s: the string
- * Return: the lenth
- */
-int _strlen(char *s)
-{
-int i = 0;
+	int count;
 
-while (s[i] != '\0')
-{
-i++;
-}
-return (i);
+	count = 0;
+
+	while (count < n)
+	{
+		if (count != (n - 1))
+			printf("%i, ", a[count]);
+		else
+			printf("%i", a[count]);
+		count++;
+	}
+	printf("\n");
 }
